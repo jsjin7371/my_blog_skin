@@ -25,6 +25,31 @@
 > 규칙: 새 이름의 브랜치를 만들 때는 항상 "왜 만드는지"가 이름에 드러나야 함.
 > 예: `feature/dark-mode`, `fix/mobile-header-broken`, `hotfix/login-crash`
 
+### 브랜치별 파일 구성 (이 저장소 특이사항)
+
+이 저장소는 `main`과 `develop`의 **파일 구성이 의도적으로 다릅니다.**
+
+| 브랜치 | 포함 | 제외 |
+|---|---|---|
+| `main` | 배포 산출물만: `src/`, `README.md`, `.gitignore` | 개발 문서 전체 |
+| `develop` | 개발 전체: 위 + `plan.md`, `requirements.md`, `design-direction.md`, `roadmap.md`, `tistory-skin-guide.md`, `mockup.html`, `GIT_WORKFLOW.md` | - |
+
+> ⚠️ 배포(2-2)에서 `develop` → `main` merge 시 개발 문서가 main에 유입됩니다.
+> main merge 직후 아래처럼 문서를 다시 제외하는 커밋을 남깁니다.
+
+```bash
+git checkout main
+git merge develop --no-ff -m "Merge branch 'develop' into main"
+git rm -r --cached plan.md requirements.md design-direction.md roadmap.md \
+       tistory-skin-guide.md mockup.html GIT_WORKFLOW.md
+git commit -m "chore: main에서 개발 문서 제외 (develop 전용)"
+git tag v1.0.0 -m "설명"
+git push origin main --tags
+```
+
+> 반면 `main` → `develop` merge는 문서가 삭제될 수 있으므로 **가능한 한 피하고**,
+> 꼭 필요하면 merge 후 `git checkout develop -- <문서들>` 로 복원합니다.
+
 ---
 
 ## 2. 작업 흐름
