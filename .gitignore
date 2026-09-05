@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터
+.vscode/
+.idea/
+
+# 임시 / 검수 산출물
+_check*
+_live*
+_home.html
+_links.txt
+_tagcheck.txt
+
+# 로그
+*.log
+
+# 의존성 (스킨에는 불필요)
+node_modules/
