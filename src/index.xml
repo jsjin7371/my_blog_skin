@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>Just-Start Renewal</name>
+    <version>0.1.0</version>
+    <description><![CDATA[심플하고 모던한 기술 블로그 스킨. 풀스크린 히어로, 터미널 컨셉 스크롤 전환, 사이드바 토글, 다크 모드를 지원합니다.]]></description>
+    <license><![CDATA[자유로운 수정 및 재배포가 가능합니다.]]></license>
+  </information>
+  <author>
+    <name>jsjin</name>
+    <homepage>https://jsjin.tistory.com</homepage>
+    <email></email>
+  </author>
+  <default>
+    <recentEntries>5</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <tagsInCloud>30</tagsInCloud>
+    <sortInCloud>3</sortInCloud>
+    <expandComment>0</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>25</lengthOfRecentNotice>
+    <lengthOfRecentEntry>32</lengthOfRecentEntry>
+    <lengthOfRecentComment>32</lengthOfRecentComment>
+    <lengthOfRecentTrackback>32</lengthOfRecentTrackback>
+    <lengthOfLink>32</lengthOfLink>
+    <entriesOnPage>8</entriesOnPage>
+    <entriesOnList>12</entriesOnList>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <commentMessage>
+      <none>댓글이 없습니다.</none>
+      <single>댓글 <span class="cnt">하나</span> 달렸습니다.</single>
+    </commentMessage>
+    <trackbackMessage>
+      <none>받은 트랙백이 없습니다.</none>
+      <single>트랙백 <span class="cnt">하나</span> 받았습니다.</single>
+    </trackbackMessage>
+    <tree>
+      <color>374151</color>
+      <bgColor>FFFFFF</bgColor>
+      <activeColor>2563EB</activeColor>
+      <activeBgColor>EFF6FF</activeBgColor>
+      <labelLength>30</labelLength>
+      <showValue>1</showValue>
+    </tree>
+    <contentWidth>1080</contentWidth>
+  </default>
+</skin>
